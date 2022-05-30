@@ -1,0 +1,10 @@
+limite = int(input('Informe um limite maior que zero: '))
+x = 0
+y = 1
+cont = 1
+while cont <= limite:
+    soma = x + y
+    print('{}'.format(x), end=' -> ' if cont < limite else '')
+    x = y
+    y = soma
+    cont += 1
