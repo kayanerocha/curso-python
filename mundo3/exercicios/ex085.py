@@ -1,6 +1,6 @@
 numeros = [[], []]
 for c in range(0, 7):
-    numero = int(input('Número: '))
+    numero = int(input(f'Digite o {c + 1}° valor: '))
     if numero % 2 == 0:
         numeros[0].append(numero)
     else:
