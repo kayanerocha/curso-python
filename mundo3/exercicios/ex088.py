@@ -6,7 +6,7 @@ print('{:^40}'.format('JOGA NA MEGA SENA'))
 print('-' * 40)
 qtd_jogos = int(input('Quantidade de jogos desejada: '))
 
-print('{:=^40}'.format(' SORTEANDO 4 JOGOS '))
+print('{:=^40}'.format(f' SORTEANDO {qtd_jogos} JOGOS '))
 sleep(1)
 
 numeros_possiveis = list()
