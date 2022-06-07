@@ -9,5 +9,5 @@ for linha in range(0, 3):
 # imprime a matriz
 for linha in range(0, 3):
     for coluna in range(0, 3):
-        print(f'[ {matriz[linha][coluna]} ]', end='\n' if coluna == 2 else ' ')
+        print(f'[{matriz[linha][coluna]:^5}]', end='\n' if coluna == 2 else ' ')
 
