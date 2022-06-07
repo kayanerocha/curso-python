@@ -2,7 +2,7 @@ from random import choice
 from time import sleep
 
 print('-' * 40)
-print('{:^40}'.format('JOGA NA MEGA SENA'))
+print(f'{"JOGA NA MEGA SENA":^40}')
 print('-' * 40)
 qtd_jogos = int(input('Quantidade de jogos desejada: '))
 
@@ -25,6 +25,7 @@ for j in range(qtd_jogos):
         numeros_possiveis.remove(num_escolhido) # remove para não repetir no mesmo jogo
 
     # adiciona na lista de jogos uma cópia do jogo feito
+    jogo.sort()
     todos_jogos.append(jogo[:])
     jogo.clear()
     numeros_possiveis.clear() # limpa para no próximo loop adicionar novamente os 60 números
@@ -33,5 +34,4 @@ for p, jg in enumerate(todos_jogos):
     print(f'Jogo {p + 1}: {jg}')
     sleep(1)
 
-print('{:=^40}'.format(' < BOA SORTE! > '))
-
+print(f'{" < BOA SORTE! > ":=^40}')
