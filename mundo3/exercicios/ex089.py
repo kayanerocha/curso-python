@@ -18,11 +18,11 @@ while True:
         break
 
 print('-=' * 30)
-print(f'{"N°":<2} {"NOME":<15} MÉDIA')
+print(f'{"N°":<2} {"NOME":<15} {"MÉDIA":>8}')
 print('-' * 30)
 
 for posicao, aluno in enumerate(alunos):
-    print(f'{posicao:<2} {aluno[0]:<15} {(aluno[1][0] + aluno[1][1]) / 2:.1f}')
+    print(f'{posicao:<2} {aluno[0]:<15} {(aluno[1][0] + aluno[1][1]) / 2:8.1f}')
 
 print('-' * 40)
 while True:
