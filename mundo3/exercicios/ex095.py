@@ -1,11 +1,17 @@
+##########################################################################################
+#           Guarda o aproveitamento de vários jogadores em dicionários, em uma lista     #
+#                               e analisa os dados de cada um                            #
+##########################################################################################
+
 jogador = dict()
 lista_jogadores = list()
+gols_por_partida = list()
 while True:
     print('-' * 50)
+    jogador.clear()
     jogador['nome'] = str(input('Nome do jogador: '))
     qtd_partidas = int(input(f'Quantidade de partidas que {jogador["nome"]} jogou? '))
 
-    gols_por_partida = list()
     for partida in range(qtd_partidas):
         gols_por_partida.append(int(input(f'Quantidade de gols na partida {partida + 1}: ')))
 

@@ -1,3 +1,7 @@
+##########################################################################################
+#                   Guarda o aproveitamento de um jogador em um dicionário               #
+##########################################################################################
+
 jogador = dict()
 jogador['nome'] = str(input('Nome do jogador: '))
 qtd_partidas = int(input(f'Quantidade de partidas {jogador["nome"]} jogou? '))
@@ -7,7 +11,7 @@ for partida in range(qtd_partidas):
     gols_por_partida.append(int(input(f'Quantidade de gols na partida {partida + 1}: ')))
 
 jogador['aproveitamento'] = {'qtd_partidas': qtd_partidas}
-jogador['aproveitamento']['gols_por_partida'] = gols_por_partida
+jogador['aproveitamento']['gols_por_partida'] = gols_por_partida[:]
 jogador['aproveitamento']['total_gols'] = sum(jogador['aproveitamento']['gols_por_partida'])
 
 print('-=' * 60)

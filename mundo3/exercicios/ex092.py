@@ -1,4 +1,9 @@
-from datetime import date, datetime
+##########################################################################################
+#           Guarda dados de um trabalhador em um dicionário e calcula com quantos anos   #
+#                                     vai se aposentar                                   #
+##########################################################################################
+
+from datetime import datetime
 
 trabalhador = dict()
 trabalhador['nome'] = str(input('Nome: '))
@@ -15,4 +20,4 @@ if trabalhador['ctps'] != 0:
 
 print('-=' * 30)
 for key, value in trabalhador.items():
-    print(f'{key} tem o valor {value}')
+    print(f' - {key} tem o valor {value}')
