@@ -21,13 +21,16 @@ def contador(inicio, fim, passo):
     passo = 1 if passo == 0 else abs(passo)
 
     print(f'Contagem de {inicio } até {fim} de {passo} em {passo}')
+    sleep(2.5)
 
     if inicio < fim:
         for c in range(inicio, fim + 1, passo):
-            print(c, end= ' ')
+            print(c, end= ' ', flush=True) # não liga o buffer de tela nesse print, para o sleep funcionar
+            sleep(0.5)
     else:
         for c in range(inicio, fim - 1, -passo):
-            print(c, end=' ')
+            print(c, end=' ', flush=True) # não liga o buffer de tela nesse print
+            sleep(0.5)
 
     print('FIM!')
 

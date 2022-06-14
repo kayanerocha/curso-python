@@ -8,7 +8,8 @@ def maior(*valores):
     print('Analisando os valores passados...')
 
     for v in valores:
-        print(v, end=' ')
+        print(v, end=' ', flush=True)
+        sleep(0.5)
 
     print(f'Foram informados {len(valores)} valores ao todo.')
     maior = max(valores) if len(valores) > 0 else 0
