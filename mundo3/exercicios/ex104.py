@@ -7,6 +7,11 @@ import string
 
 
 def leiaInt(mensagem):
+    """
+    -> Valida se a entada é um inteiro.
+    :param mensagem: mensagem que solicita a entrada.
+    :return: o número informado pelo usuário.
+    """
     while True:   
         numero = input(f'{mensagem}').strip()
         if numero in '0123456789' and len(numero) > 0:
