@@ -2,10 +2,6 @@
 #                   Função que valida se a entrada do usuário é um int                   #
 ##########################################################################################
 
-from glob import glob
-import string
-
-
 def leiaInt(mensagem):
     """
     -> Valida se a entada é um inteiro.
@@ -13,8 +9,9 @@ def leiaInt(mensagem):
     :return: o número informado pelo usuário.
     """
     while True:   
-        numero = input(f'{mensagem}').strip()
-        if numero in '0123456789' and len(numero) > 0:
+        numero = str(input(mensagem)).strip()
+        if numero.isnumeric():
+            numero = int(numero)
             break
         print('\033[31mERRO! Digite um número inteiro válido.\033[m')
     return numero

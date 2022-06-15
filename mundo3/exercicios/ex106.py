@@ -12,7 +12,7 @@ def mostraTitulo(titulo, cor):
     :param cor: cor de fundo para o título.
     :return: sem retorno.
     """
-    print(f'\033[{cor}m')
+    print(cor)
     print(f'~' * (len(titulo) + 4))
     print(f'  {titulo}  ')
     print('~' * (len(titulo) + 4))
@@ -25,7 +25,8 @@ def interactiveHelp(comando):
     :param comando: comando que o usuário deseja ver o manual.
     :return: sem retorno.
     """
-    mostraTitulo(f"Acessando o manual do comando '{comando}'", 46)
+    mostraTitulo(f"Acessando o manual do comando '{comando}'", '\033[0;30;44m')
+    sleep(0.5)
     
     print('\033[0;30;47m')
     help(comando)
@@ -33,10 +34,10 @@ def interactiveHelp(comando):
     sleep(0.5)
     
 while True:
-    mostraTitulo('SISTEMA DE AJUDA PyHELP', 42)
+    mostraTitulo('SISTEMA DE AJUDA PyHELP', '\033[0;30;42m')
     comando = str(input('Função ou Biblioteca > ')).strip()
-    if comando.upper() in 'FIM':
+    if comando.upper() == 'FIM':
         break
     interactiveHelp(comando)
 
-mostraTitulo('ATÉ LOGO!', 41)
+mostraTitulo('ATÉ LOGO!', '\033[0;30;41m')

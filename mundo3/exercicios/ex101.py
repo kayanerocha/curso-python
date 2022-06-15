@@ -2,8 +2,6 @@
 #                   Função que recebe o ano de nascimento e diz uma pessoa               #
 #                           tem voto negado, opcional ou obrigatório                     #
 ##########################################################################################
-from datetime import datetime
-
 def voto(ano_nascimento):
     """
     -> Verifica se o voto do usuário é negado, opcional ou obrigatório.
@@ -11,6 +9,8 @@ def voto(ano_nascimento):
     :return: valor literal.
     Função criada por Kayane Rocha.
     """
+    from datetime import datetime # importando dentro da função economiza memória
+
     idade = datetime.now().year - ano_nascimento
     voto = ''
     if idade < 16:

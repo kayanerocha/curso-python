@@ -16,14 +16,14 @@ def notas(*notas, situacao=False):
                 'menor': min(notas),
                 'media': media}
     if situacao:
-        if media < 6:
+        if media < 5:
             informacoes['situacao'] = 'RUIM'
-        elif media <= 7:
-            informacoes['situacao'] = 'BOA'
+        elif media < 7:
+            informacoes['situacao'] = 'RAZOÁVEL'
         else:
-            informacoes['situacao'] = 'ÓTIMA'
+            informacoes['situacao'] = 'BOA'
     
     return informacoes
 
-resp = notas(6, 6, 6, 6.5)
+resp = notas(6, 6, 6, 6.5, situacao=True)
 print(resp)

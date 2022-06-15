@@ -14,7 +14,7 @@ def ficha(nome, gols=0):
     :return: sem retorno.
     """
     nome = '<desconhecido>' if len(nome) == 0 else nome
-    gols = 0 if len(gols) == 0 or gols != string.digits else gols
+    gols = 0 if len(gols) == 0 or gols != string.digits else int(gols)
     print(f'O jogador {nome} fez {gols} gol(s) no campeonato.')
 
 print('-' * 30)
