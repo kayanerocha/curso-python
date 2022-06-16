@@ -17,7 +17,7 @@ def resumo(valor, porcen_aumenta, porcen_diminui):
     print(f'Preço analisado:\t {moeda(valor)}')
     print(f'Dobro do preço:\t\t {dobro(valor, True)}')
     print(f'Metade do preço:\t {metade(valor, True)}')
-    print(f'{porcen_aumenta}% de aumento:\t\t {aumentar(valor, porcen_aumenta, True):<15}')
-    print(f'{porcen_diminui}% de redução:\t\t {diminuir(valor, porcen_diminui, True):<15}')
+    print(f'{porcen_aumenta}% de aumento:\t\t {aumentar(valor, porcen_aumenta, True)}')
+    print(f'{porcen_diminui}% de redução:\t\t {diminuir(valor, porcen_diminui, True)}')
     
     linha(len(msg))
