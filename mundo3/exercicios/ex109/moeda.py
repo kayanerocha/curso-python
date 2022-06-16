@@ -1,0 +1,1 @@
+from ex107.moeda import aumentar, diminuir, dobro, metade, moeda
