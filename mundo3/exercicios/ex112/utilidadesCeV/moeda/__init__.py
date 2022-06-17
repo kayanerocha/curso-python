@@ -33,9 +33,6 @@ def metade(valor, formata=False):
         novo_valor = valor / 2
     return novo_valor
 
-
-from ex107.moeda import aumentar, diminuir, dobro, metade, moeda
-
 def linha(tamanho):
     print('-' * (tamanho + 20))
 

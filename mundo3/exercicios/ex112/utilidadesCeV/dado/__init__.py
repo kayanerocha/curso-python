@@ -2,10 +2,6 @@
 #                                   Valida a entrada do valor                            #
 ##########################################################################################
 
-from posixpath import split
-import string
-
-
 def leiaDinheiro(msg):
     while True:
         valor = str(input(msg)).strip()
@@ -17,7 +13,7 @@ def leiaDinheiro(msg):
                     break
         if is_monetario and valor != '':
             break
-        print(f'ERRO: "{valor}" é um preço inválido!')
+        print(f'\033[0;31mERRO: "{valor}" é um preço inválido!\033[m')
     
     if ',' in valor:
         valor = valor.replace(',', '.')

@@ -1,7 +1,3 @@
-##########################################################################################
-#                       Junta as funções dos exercícios 107, 108 e 109                   #
-##########################################################################################
-
 def moeda(valor):
     return f'R$ {valor:.2f}'.replace('.', ',')
 
@@ -32,9 +28,6 @@ def metade(valor, formata=False):
     else:
         novo_valor = valor / 2
     return novo_valor
-
-
-from ex107.moeda import aumentar, diminuir, dobro, metade, moeda
 
 def linha(tamanho):
     print('-' * (tamanho + 20))
