@@ -10,7 +10,7 @@ def leiaInt(msg):
             print('\n\033[0;31mUsuário preferiu não digitar esse número.\033[m')
             inteiro = 0
             break
-        except:
+        except (ValueError, TypeError):
             print('\033[0;31mERRO: por favor, digite um número inteiro válido.\033[m')
         else:
             break
